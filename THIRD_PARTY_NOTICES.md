@@ -25,3 +25,9 @@ BLURT crops or letterboxes, resizes and pixelates individual images; these deriv
 The original ten launch photos use the [Unsplash License](https://unsplash.com/license); their identifiers remain in `content/puzzles.json` for historical results
 
 Subject discovery used factual names from [Darius Kazemi’s Corpora](https://github.com/dariusk/corpora), CC0, and [OpenMoji](https://github.com/hfg-gmuend/openmoji), CC BY-SA 4.0; no OpenMoji graphics are included, and the discovery data license is preserved in `vendor/openmoji/LICENSE.txt`
+
+## Pacific background and Comfortaa
+
+The photographic Pacific-cove background is adapted by saturation and brightness adjustment from Unsplash photo `photo-1510414842594-a61c69b5ae57`, downloaded from https://images.unsplash.com/photo-1510414842594-a61c69b5ae57 under the [Unsplash License](https://unsplash.com/license). It is a decorative world asset, separate from the private game library.
+
+Comfortaa by Johan Aakerlund is self-hosted from Fontsource under the SIL Open Font License 1.1, included at public/fonts/comfortaa-LICENSE.txt. Source: https://github.com/fontsource/fontsource/tree/main/font-packages/variable/comfortaa

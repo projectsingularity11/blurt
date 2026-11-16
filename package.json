@@ -17,6 +17,7 @@
     "test:cloud": "node --use-env-proxy scripts/check-cloud.mjs"
   },
   "dependencies": {
+    "@fontsource-variable/comfortaa": "^5.3.0",
     "@fontsource-variable/dynapuff": "^5.3.0",
     "@fontsource-variable/nunito": "^5.3.0",
     "@supabase/ssr": "0.12.0",

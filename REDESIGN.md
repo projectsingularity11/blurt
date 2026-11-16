@@ -24,3 +24,7 @@ Daily Bloom, Petal Party, Free Bloom and Flash Bloom share authoritative server 
 All 15,582 new prepared WebP objects are private. Source hashes, decoded pixel hashes, canonical answers and first-stage hashes are unique. Every source has explicit reuse licensing and attribution. The no-repeat allocator records guests across solo modes, parties and spectating; exhaustion is explicit rather than recycling images. The temporary content importer is closed with HTTP 410.
 
 The final software-rendered cloud-browser pointer stress run measured 29.3 ms average and 83.4 ms p95 frame intervals; an earlier isolated run measured 17.3 ms average. The implementation targets 60 fps, but a universal 60 fps minimum is not verified and remains a performance limitation on this test host.
+
+## Pacific daydream finish
+
+The final visual revision replaces the geometric landscape with a locally served high-resolution Pacific cove photograph, a lighter mobile variant, optical light wash, oversized pink/lime glass planets, chrome orbits and four-point highlights. Comfortaa replaces Nunito as the base font while DynaPuff remains the display face. Desktop/tablet/mobile screenshots show no horizontal overflow, navigation works and the browser reports no page errors. Lint, TypeScript and production build pass.

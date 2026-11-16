@@ -233,9 +233,16 @@ export function AeroWorld() {
       <div className="aero-world" aria-hidden="true">
         <div className="aero-sun" />
         <div className="aero-clouds" />
-        <div className="aero-horizon" />
-        <div className="aero-water" />
-        <div className="aero-caustics" />
+        <div className="aero-lightwash" />
+        <div className="orbital-garden">
+          <i className="glass-planet planet-pink"><b /></i>
+          <i className="glass-planet planet-lime"><b /></i>
+          <i className="chrome-orbit orbit-one" />
+          <i className="chrome-orbit orbit-two" />
+          <i className="aero-star star-one" />
+          <i className="aero-star star-two" />
+          <i className="aero-star star-three" />
+        </div>
       </div>
       <div className="aero-bubbles" ref={field} aria-hidden="true">
         {bubbles.map(([x, y, size], i) => (

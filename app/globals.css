@@ -2722,3 +2722,68 @@ dialog::backdrop {
 .pointer-effects .water-click {
   position: absolute;
 }
+
+/* Pacific daydream — photographic nature under optical glass */
+.aero-world {
+  background: #65d6e7 url('/world/pacific.webp') center 55% / cover no-repeat;
+}
+.aero-world::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, #07c8d53d, #a6faff38 45%, #ffb1e61a), linear-gradient(#a5efff30, transparent 40%, #0097b31a);
+}
+.aero-lightwash {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 38%, #e7fbffb8 0%, #dbfaff70 30%, transparent 68%);
+}
+.aero-clouds { opacity: .3; }
+[data-theme="dark"] .aero-world {
+  background: #064d64 url('/world/pacific.webp') center 55% / cover no-repeat;
+}
+[data-theme="dark"] .aero-world::after {
+  background: linear-gradient(120deg, #001f4980, #0343616b, #420c5b55);
+}
+[data-theme="dark"] .aero-lightwash {
+  background: radial-gradient(ellipse at 50% 38%, #064966b5, #06496655 36%, transparent 70%);
+}
+.orbital-garden { position: absolute; inset: 0; z-index: 1; }
+.glass-planet {
+  position: absolute;
+  width: clamp(110px, 17vw, 270px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at 30% 23%, #fff 0 2%, #fff8 7%, transparent 25%), radial-gradient(circle at 38% 35%, #ffd4eff0, #ff339c9e 40%, #a8007580 72%, #fff7 95%);
+  box-shadow: inset 0 0 0 2px #fff9, inset -13px -17px 22px #92005b55, inset 8px 8px 20px #fff9, 0 24px 35px -20px #003951aa;
+  transform: rotate(-22deg);
+}
+.planet-pink { left: -5%; top: 14%; }
+.glass-planet b {
+  position: absolute; left: -27%; top: 35%; width: 154%; height: 29%; border: 12px solid #b9f9ffba; border-left-color: #fff; border-right-color: #46bdd099; border-radius: 50%; transform: rotate(-24deg); box-shadow: 0 5px 5px #04537655, inset 0 2px 0 #fff;
+}
+.planet-lime { right: -4%; bottom: 9%; width: clamp(130px, 19vw, 300px); background: radial-gradient(ellipse at 29% 20%, #fff 0 2%, #fff9 7%, transparent 25%), radial-gradient(circle at 38% 35%, #f0ffc8e8, #a3f45b9c 40%, #008e6980 76%, #fff8 96%); box-shadow: inset 0 0 0 2px #fff9, inset -13px -17px 22px #005a6155, inset 8px 8px 20px #fff9, 0 24px 35px -20px #003951aa; transform: rotate(27deg); }
+.planet-lime b { border-color: #ffd5edb5; border-left-color: #fff; border-right-color: #ff58aaa6; }
+.chrome-orbit { position: absolute; width: 230px; height: 390px; border: 9px solid #e9ffffa6; border-right-color: #5dd4da44; border-bottom-color: #fca2d399; border-radius: 50%; box-shadow: inset 2px 0 0 #fff, 3px 0 0 #fff8, 5px 5px 16px #00556930; }
+.orbit-one { right: 5%; top: -20%; transform: rotate(50deg); }
+.orbit-two { left: 5%; bottom: -28%; transform: rotate(-55deg); width: 300px; height: 480px; }
+.aero-star { position: absolute; width: 35px; height: 35px; background: linear-gradient(135deg,#fff,#fff9 40%,#b5ffff); clip-path: polygon(50% 0,60% 38%,100% 50%,60% 62%,50% 100%,40% 62%,0 50%,40% 38%); }
+.star-one { left: 20%; top: 12%; transform: rotate(15deg); }
+.star-two { right: 15%; top: 45%; width: 24px; height: 24px; }
+.star-three { left: 12%; bottom: 17%; width: 45px; height: 45px; transform: rotate(20deg); }
+body { font-weight: 600; letter-spacing: -.025em; line-height: 1.55; }
+.mode-card p, .home-identity p { font-weight: 650; }
+.mode-card { background-color: #e8fbff8c; }
+.daily-card { background-color: #ffdaf0a8; }
+.mode-cta, .button { letter-spacing: -.035em; font-weight: 700; }
+.title-screen footer { background: #edffffb8; border: 1px solid #fff9; border-radius: 20px; padding: 10px 16px; box-shadow: inset 0 1px 0 #fff, 0 3px 12px #00546c20; }
+[data-theme="dark"] .mode-card { background-color: #053653a8; }
+[data-theme="dark"] .daily-card { background-color: #5c164b9c; }
+[data-theme="dark"] .title-screen footer { background: #042c49ba; }
+@media (max-width: 600px) {
+  .aero-world, [data-theme="dark"] .aero-world { background-image: url('/world/pacific-mobile.webp'); background-position: 54% center; }
+  .planet-pink { left: -75px; top: 5%; }
+  .planet-lime { right: -90px; bottom: 16%; }
+  .chrome-orbit { opacity: .65; }
+  body { font-size: 14px; }
+}

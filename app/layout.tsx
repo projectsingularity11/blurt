@@ -8,8 +8,8 @@ const space = localFont({
   variable: "--font-space",
   display: "swap",
 });
-const manrope = localFont({
-  src: "../public/fonts/nunito.woff2",
+const comfortaa = localFont({
+  src: "../public/fonts/comfortaa.woff2",
   variable: "--font-manrope",
   display: "swap",
 });
@@ -26,7 +26,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <head>
           <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         </head>
-        <body className={`${space.variable} ${manrope.variable}`}>
+        <body className={`${space.variable} ${comfortaa.variable}`}>
           <AeroWorld />
           {children}
         </body>

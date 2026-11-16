@@ -60,6 +60,10 @@ for (const { width, theme, phase } of scenes) {
         const page = await context.newPage();
         await page.goto(baseURL!);
         await page.evaluate(() => document.fonts.ready);
+        // Chrome can carry a previous test's pointer position into a new tab.
+        // Keep hover transforms and interactive bubble forces out of this
+        // fixed-time comparison of ambient lighting.
+        await page.mouse.move(-100, -100);
         if (optimized)
           await expect(page.locator(".aero-world")).toHaveClass(
             /has-light-cache/,

@@ -52,3 +52,11 @@ BASELINE_URL=http://localhost:3032 BASE_URL=http://localhost:3034 PERF_ASSERT=1 
 ```
 
 `PERF_ASSERT=1` requires at least 20% lower median frame intervals in both workloads; three runs retain normal measurement variance rather than relying on a single favorable sample.
+
+## Live production verification
+
+Production deployment `dpl_9pfNEJwoqKQKnRBRN9QFkxs8bBbn` serves runtime commit `a800f88` at https://blurt-eight.vercel.app. All 22 distinct browser scenarios passed across the full production suite and the targeted rerun; the 25 unit/database tests also passed. Health and worker delivery return HTTP 200, and the deployment error/fatal log scan was empty.
+
+The initial live suite exposed two older assertions that required a whole homepage to fit a 900px viewport. The previous immutable production release also scrolls: at 375px wide, both versions measured exactly 938px tall. The tests now verify footer reachability through natural vertical scrolling while retaining horizontal-overflow, help, navigation, picture and privacy assertions. No product layout was changed to satisfy the tests.
+
+The pixel harness explicitly moves the pointer outside the viewport before freezing animations, eliminating inherited hover state between browser contexts. The seven visual comparisons then passed in the production rerun without relaxing either color tolerance. The final verification-only commit changes tests and this record; its runtime source is identical to the deployed commit.

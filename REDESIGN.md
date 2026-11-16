@@ -28,3 +28,7 @@ The final software-rendered cloud-browser pointer stress run measured 29.3 ms av
 ## Pacific daydream finish
 
 The final visual revision replaces the geometric landscape with a locally served high-resolution Pacific cove photograph, a lighter mobile variant, optical light wash, oversized pink/lime glass planets, chrome orbits and four-point highlights. Comfortaa replaces Nunito as the base font while DynaPuff remains the display face. Desktop/tablet/mobile screenshots show no horizontal overflow, navigation works and the browser reports no page errors. Lint, TypeScript and production build pass.
+
+## Living glass motion
+
+Planets float and turn, rings precess, chrome orbits drift, stars breathe, mode icons bob and glass highlights sweep across stable cards. A separate slightly blurred photographic layer drifts beneath the sharp interface and planets. Motion uses transforms and opacity; hidden tabs pause decorative animation and reduced-motion users receive a static world. Controls retain stable hit areas.

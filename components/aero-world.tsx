@@ -208,6 +208,7 @@ export function AeroWorld() {
     };
     const leave = () => cursor.current?.classList.remove("visible");
     const visibility = () => {
+      document.documentElement.toggleAttribute("data-page-hidden", document.hidden);
       if (document.hidden) {
         cancelAnimationFrame(frame);
         frame = 0;
@@ -221,6 +222,7 @@ export function AeroWorld() {
     return () => {
       cancelAnimationFrame(frame);
       timers.forEach(clearTimeout);
+      document.documentElement.removeAttribute("data-page-hidden");
       window.removeEventListener("pointermove", move);
       window.removeEventListener("resize", measure);
       document.removeEventListener("click", click);

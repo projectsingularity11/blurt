@@ -32,3 +32,7 @@ The final visual revision replaces the geometric landscape with a locally served
 ## Living glass motion
 
 Planets float and turn, rings precess, chrome orbits drift, stars breathe, mode icons bob and glass highlights sweep across stable cards. A separate slightly blurred photographic layer drifts beneath the sharp interface and planets. Motion uses transforms and opacity; hidden tabs pause decorative animation and reduced-motion users receive a static world. Controls retain stable hit areas.
+
+## Rendering optimization
+
+The same diffuse lighting is now cached on a native-resolution 2D worker surface instead of three independent full-screen animated layers. The photo, blur, planets, glass, fonts and foreground motion remain unchanged. Reduced-motion and unsupported browsers use the original CSS. See PERFORMANCE.md for paired measurements, rejected experiments and visual regression checks.

@@ -18,7 +18,10 @@ test("uses page transitions without loading the removed 3D renderer", async ({
   });
   await page.goto("/");
   await expect(page.locator(".bubble-shell")).toHaveCount(12);
-  expect(await page.locator("canvas").count()).toBe(0);
+  // A hidden-to-assistive-tech 2D light cache replaces expensive CSS blending;
+  // the removed 3D renderer remains absent.
+  await expect(page.locator(".aero-light-cache")).toHaveAttribute("aria-hidden", "true");
+  expect(await page.locator("canvas:not(.aero-light-cache)").count()).toBe(0);
   await page.getByRole("link", { name: /Free Bloom/ }).click();
   await expect(
     page.getByRole("heading", { name: "Free Bloom", exact: true }),

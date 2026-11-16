@@ -1,0 +1,110 @@
+[
+  {
+    "run": 0,
+    "version": "before",
+    "workload": "idle",
+    "frames": 131,
+    "averageMs": 30.532824427480914,
+    "p95Ms": 50,
+    "slowFrames": 95
+  },
+  {
+    "run": 0,
+    "version": "before",
+    "workload": "pointer",
+    "frames": 122,
+    "averageMs": 33.05875409836065,
+    "p95Ms": 50.100000000000364,
+    "slowFrames": 96
+  },
+  {
+    "run": 0,
+    "version": "after",
+    "workload": "idle",
+    "frames": 222,
+    "averageMs": 18.16756756756757,
+    "p95Ms": 16.800000000000182,
+    "slowFrames": 11
+  },
+  {
+    "run": 0,
+    "version": "after",
+    "workload": "pointer",
+    "frames": 2,
+    "averageMs": 2166.5679999999998,
+    "p95Ms": 3733.199999999999,
+    "slowFrames": 2
+  },
+  {
+    "run": 1,
+    "version": "before",
+    "workload": "idle",
+    "frames": 100,
+    "averageMs": 39.832,
+    "p95Ms": 100,
+    "slowFrames": 76
+  },
+  {
+    "run": 1,
+    "version": "before",
+    "workload": "pointer",
+    "frames": 108,
+    "averageMs": 36.88118518518518,
+    "p95Ms": 66.70000000000073,
+    "slowFrames": 94
+  },
+  {
+    "run": 1,
+    "version": "after",
+    "workload": "idle",
+    "frames": 239,
+    "averageMs": 16.80502092050209,
+    "p95Ms": 16.700000000000728,
+    "slowFrames": 2
+  },
+  {
+    "run": 1,
+    "version": "after",
+    "workload": "pointer",
+    "frames": 192,
+    "averageMs": 20.91979166666667,
+    "p95Ms": 49.900000000001455,
+    "slowFrames": 35
+  },
+  {
+    "run": 2,
+    "version": "before",
+    "workload": "idle",
+    "frames": 137,
+    "averageMs": 29.195620437956205,
+    "p95Ms": 50,
+    "slowFrames": 86
+  },
+  {
+    "run": 2,
+    "version": "before",
+    "workload": "pointer",
+    "frames": 116,
+    "averageMs": 34.48103448275862,
+    "p95Ms": 50,
+    "slowFrames": 100
+  },
+  {
+    "run": 2,
+    "version": "after",
+    "workload": "idle",
+    "frames": 234,
+    "averageMs": 17.093162393162395,
+    "p95Ms": 16.800000000000182,
+    "slowFrames": 2
+  },
+  {
+    "run": 2,
+    "version": "after",
+    "workload": "pointer",
+    "frames": 159,
+    "averageMs": 25.15660377358491,
+    "p95Ms": 50,
+    "slowFrames": 59
+  }
+]

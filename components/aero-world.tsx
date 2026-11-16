@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { playCue } from "@/lib/audio";
+import { cacheAeroLighting } from "@/lib/aero-lighting";
 
 // Thin-film sphere styling is adapted from Visnalize/makeaero (MIT).
 // The droplet and spring-trailing cursor adapt Frutiger.js (MIT).
@@ -20,7 +21,9 @@ const bubbles = [
   [89, 44, 38],
 ];
 export function AeroWorld() {
+  const world = useRef<HTMLDivElement>(null);
   const field = useRef<HTMLDivElement>(null);
+  useEffect(() => world.current ? cacheAeroLighting(world.current) : undefined, []);
   const cursor = useRef<HTMLDivElement>(null);
   const effects = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -232,7 +235,7 @@ export function AeroWorld() {
   }, []);
   return (
     <>
-      <div className="aero-world" aria-hidden="true">
+      <div className="aero-world" ref={world} aria-hidden="true">
         <div className="aero-sun" />
         <div className="aero-clouds" />
         <div className="aero-lightwash" />

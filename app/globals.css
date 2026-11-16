@@ -2892,3 +2892,19 @@ html[data-page-hidden] .mode-card::after,
 html[data-page-hidden] .soap-bubble,
 html[data-page-hidden] .hero-bloom { animation-play-state: paused !important; }
 .mode-card::after { height: auto; border-radius: inherit; }
+
+/* Same animated light, one cached 2D surface instead of three full-screen layers. */
+.aero-light-cache {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  visibility: hidden;
+}
+.has-light-cache > .aero-light-cache { visibility: visible; }
+.has-light-cache > .aero-sun,
+.has-light-cache > .aero-clouds,
+.has-light-cache > .aero-lightwash { display: none; }
+@property --tilt-x { syntax: '<angle>'; inherits: false; initial-value: 1deg; }
+@property --tilt-y { syntax: '<angle>'; inherits: false; initial-value: -1deg; }

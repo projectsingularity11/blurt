@@ -1,0 +1,11 @@
+import a0 from './assets-0.json' with {type:'json'};
+import a1 from './assets-1.json' with {type:'json'};
+import a2 from './assets-2.json' with {type:'json'};
+import a3 from './assets-3.json' with {type:'json'};
+import a4 from './assets-4.json' with {type:'json'};
+import a5 from './assets-5.json' with {type:'json'};
+import a6 from './assets-6.json' with {type:'json'};
+import a7 from './assets-7.json' with {type:'json'};
+import a8 from './assets-8.json' with {type:'json'};
+import a9 from './assets-9.json' with {type:'json'};
+export default {...a0,...a1,...a2,...a3,...a4,...a5,...a6,...a7,...a8,...a9};

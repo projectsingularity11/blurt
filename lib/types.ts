@@ -1,0 +1,146 @@
+export type PictureCredit = {
+  author: string;
+  license: string;
+  licenseUrl: string;
+  sourceUrl: string;
+};
+export type SoloRun = {
+  id: string;
+  mode: "FREE" | "FLASH";
+  started: number;
+  ends?: number;
+  finished: boolean;
+  score: number;
+  solved: number;
+  streak: number;
+  best: number;
+  used: string[];
+  position: number;
+  current: {
+    puzzle: string;
+    guesses: Guess[];
+    done: boolean;
+    solved: boolean;
+    points: number;
+  };
+};
+export type Guess = {
+  text: string;
+  stage: number;
+  correct: boolean;
+  player?: string;
+  author?: string;
+  key?: string;
+};
+export type Player = { id: string; name: string; created: number };
+export type Run = {
+  puzzle: string;
+  day: number;
+  guesses: Guess[];
+  done: boolean;
+  solved: boolean;
+};
+export type Member = {
+  id: string;
+  name: string;
+  ready: boolean;
+  joined: number;
+  seen: number;
+  points: number;
+  spectator: boolean;
+  connected?: boolean;
+  reaction?: string;
+};
+export type Round = {
+  puzzle: string;
+  starts: number;
+  ends: number;
+  revealAt?: number;
+  guesses: Guess[];
+  solved: Record<string, number>;
+};
+export type Room = {
+  deck?: string[];
+  dealKey?: string;
+  code: string;
+  host: string;
+  status: "lobby" | "playing" | "finished";
+  members: Member[];
+  rounds: number;
+  duration: number;
+  category: string;
+  created: number;
+  expires: number;
+  round: number;
+  matchId?: string;
+  matchStarted?: number;
+  roundData?: Round;
+  used: string[];
+  banned: string[];
+  repeat: boolean;
+};
+export type State = {
+  seen?: Record<string, string[]>;
+  solo?: Record<string, SoloRun>;
+  players: Record<string, Player>;
+  daily: Record<string, Run>;
+  rooms: Record<string, Room>;
+  dailyPuzzle?: { day: number; id: string };
+  dailySelections?: Record<string, string>;
+  requests?: Record<string, { at: number; code?: string }>;
+};
+export type View = {
+  solo?: {
+    id: string;
+    mode: "FREE" | "FLASH";
+    ends?: number;
+    finished: boolean;
+    score: number;
+    solved: number;
+    streak: number;
+    best: number;
+    position: number;
+    stage: number;
+    guesses: Guess[];
+    done: boolean;
+    correct: boolean;
+    points: number;
+    category: string;
+    answer?: string;
+    credit?: PictureCredit;
+    repeat: boolean;
+  };
+  now: number;
+  me: string;
+  daily?: {
+    number: number;
+    ends: number;
+    stage: number;
+    guesses: Guess[];
+    done: boolean;
+    solved: boolean;
+    answer?: string;
+    credit?: PictureCredit;
+  };
+  room?: {
+    code: string;
+    host: string;
+    status: Room["status"];
+    members: Member[];
+    rounds: number;
+    duration: number;
+    category: string;
+    round: number;
+    starts?: number;
+    ends?: number;
+    revealAt?: number;
+    stage: number;
+    answer?: string;
+    credit?: PictureCredit;
+    feed: Guess[];
+    myGuesses: Guess[];
+    solved: Record<string, number>;
+    repeat: boolean;
+  };
+  error?: string;
+};

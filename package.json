@@ -1,0 +1,49 @@
+{
+  "name": "blurt",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 0.0.0.0",
+    "build": "next build",
+    "start": "next start --hostname 0.0.0.0",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "seed": "node scripts/prepare-content.mjs",
+    "worker": "node scripts/worker.mjs",
+    "db:migrate": "node --env-file-if-exists=.env.local scripts/migrate.mjs",
+    "edge:prepare": "node scripts/prepare-edge.mjs",
+    "test:cloud": "node --use-env-proxy scripts/check-cloud.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/dynapuff": "^5.3.0",
+    "@fontsource-variable/nunito": "^5.3.0",
+    "@supabase/ssr": "0.12.0",
+    "@supabase/supabase-js": "2.119.0",
+    "howler": "2.2.4",
+    "lucide-react": "0.561.0",
+    "next": "16.4.6",
+    "next-view-transitions": "^0.3.5",
+    "pg": "8.16.3",
+    "react": "19.2.1",
+    "react-dom": "19.2.1",
+    "sharp": "0.35.5",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.3.14",
+    "@playwright/test": "1.57.0",
+    "@tailwindcss/postcss": "4.1.17",
+    "@types/howler": "^2.2.13",
+    "@types/node": "24.10.1",
+    "@types/pg": "8.15.6",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "eslint": "9.39.1",
+    "eslint-config-next": "16.4.6",
+    "tailwindcss": "4.1.17",
+    "typescript": "5.9.3",
+    "vitest": "4.0.15"
+  }
+}

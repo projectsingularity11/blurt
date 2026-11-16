@@ -1,0 +1,7 @@
+Selected Serene Tones recordings by rubberduck
+License: Creative Commons Zero (CC0 1.0)
+https://creativecommons.org/publicdomain/zero/1.0/
+Original: https://opengameart.org/content/100-cc0-sfx
+Distributed through: https://github.com/JustPinero/pingthings/tree/main/packs/serene-tones
+The upstream pack is marked tone: professional
+No pingthings application code is included

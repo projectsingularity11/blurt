@@ -1,0 +1,17 @@
+node_modules
+.next
+.env*
+!.env.example
+.data
+content/originals
+playwright-report
+test-results
+*.tsbuildinfo
+
+.vercel
+
+# New licensed puzzle stages live only in private Supabase Storage
+content/prepared/p*.webp
+
+.cache/
+supabase/.temp/
